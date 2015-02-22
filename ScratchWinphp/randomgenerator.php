@@ -32,9 +32,9 @@ $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 //$stmt->execute(array(2, 0)); 
 //$participant = $stmt->fetchAll();
 
- 
-//$sql_select = "truncate table t_winners";
-//$stmt = $conn->query($sql_select); 
+
+$sql_select = "truncate table t_winners";
+$stmt = $conn->query($sql_select); 
 
 
 $sql_select = "SELECT * FROM t_participants ORDER BY id ASC";
@@ -80,7 +80,7 @@ echo "<td>".$participant['winner']."</td></tr>";
  
 echo "</table>";
 
-//      $msisdn="msisdn";
+//    $msisdn="msisdn";
       $msisdn=$participant['msisdn'];
       $daily_winner=1;
       $weekly_winner=0;
